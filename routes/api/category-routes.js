@@ -31,7 +31,7 @@ router.get('/', async (req, res) => {
 
   router.get('/:id', async (req, res) => {
     try {
-      const categoryData = await Location.findByPk(req.params.id, {
+      const categoryData = await Category.findByPk(req.params.id, {
     
       });
   
@@ -41,7 +41,7 @@ router.get('/', async (req, res) => {
       }
       
       res.status(200).json(categoryData);
-      console.log('hilol', categoryData)
+   
     } catch (err) {
       res.status(500).json(err);
     }
@@ -58,9 +58,29 @@ router.post('/', async (req, res) => {
     res.status(400).json(err);
   }
   // create a new category
-});
+      });
 
-router.put('/:id', (req, res) => {
+router.put('/:id', async (req, res) => {
+  try{
+
+  const categoryData = await Category.update(req.body,{
+    where: {
+      id: req.params.id
+    }
+  });
+  
+
+  if(!categoryData) {
+    res.status(404).json({ message: "Wrong Selection"})
+    return
+  }
+  res.status(200).json(categoryData);
+} catch (err) {
+  res.status(500).json(err);
+}
+
+
+
   // update a category by its `id` value
 });
 
