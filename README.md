@@ -20,10 +20,17 @@ at the point the app is run there is a video you can follow to what else can be 
 
 FUNCTIONING APP
 
-![Showing on Postman]()
 
-![Adding route]()
 
-![Displaying products]()
 
-[Youtube video link]()
+![Displaying products](img/postp.png)
+![Displaying products](img/postpa.png)
+![routes](img/route.png)
+
+Setup the sever
+[Youtube video link](https://youtu.be/eDyRhhfSvAM)
+displaying fuctions
+[Youtube video link](https://youtu.be/zEukMa3k7EA)
+
+I found it difficult to use the include aspect in some cases.
+next time i will focus on a cleaner code.
